@@ -15,12 +15,17 @@ import com.google.firebase.messaging.RemoteMessage;
 
 /**
  * Created by Belal on 5/27/2016.
+ * todo 5 - define the second service
  */
 
 public class MyFirebaseMessagingService extends FirebaseMessagingService {
 
     private static final String TAG = "MyFirebaseMsgService";
 
+    /**
+     * todo 5a - when receive message from db, send notification to android app
+     * @param remoteMessage
+     */
     @Override
     public void onMessageReceived(RemoteMessage remoteMessage) {
         //Displaying data in log
@@ -32,6 +37,10 @@ public class MyFirebaseMessagingService extends FirebaseMessagingService {
         sendNotification(remoteMessage.getNotification().getBody());
     }
 
+    /**
+     * todo 5b create notification
+     * @param messageBody
+     */
     //This method is only generating push notification
     //It is same as we did in earlier posts
     private void sendNotification(String messageBody) {

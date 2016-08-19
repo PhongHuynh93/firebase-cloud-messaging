@@ -20,7 +20,7 @@
         </activity>
 
         <!--
-            Defining Services
+            todo 6 - Defining 2 Services in android manifest
         -->
         <service
             android:name=".MyFirebaseMessagingService">
